@@ -10,15 +10,22 @@ body {
   font-family: "Rubik Marker Hatch", cursive;
 }
 
+body {
+  display: grid;
+  place-items: center;
+}
+
 h1,
 p {
   padding: 0;
   margin: 0;
 }
 
-body {
-  display: grid;
-  place-items: center;
+button {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .circle {
@@ -57,7 +64,6 @@ dialog {
   color: lightblue;
   display: grid;
   gap: 2.5rem;
-  letter-spacing: 2px;
 }
 
 .intro__title {
@@ -76,13 +82,29 @@ code {
 }
 
 .intro__close {
-  appearance: none;
   font-size: 1.5rem;
-  background-color: transparent;
   color: currentColor;
   padding: 0.5em 1em;
   border: 2px solid currentColor;
   border-radius: 99em;
-  cursor: pointer;
-  letter-spacing: inherit;
+}
+
+.show-intro {
+  position: absolute;
+  right: 5vmin;
+  bottom: 5vmin;
+  width: 4.5%;
+  aspect-ratio: 1;
+  translate: 0 10vmin;
+  opacity: 0;
+  transition: translate 500ms, opacity 400ms 100ms;
+}
+
+.show-intro > svg {
+  fill: hwb(0 100% 0%);
+}
+
+.show-up {
+  translate: 0 0;
+  opacity: 1;
 }
