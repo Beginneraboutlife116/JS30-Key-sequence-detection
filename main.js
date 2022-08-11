@@ -3,11 +3,12 @@ import circlePositionByMousemove from "./src/position.js"
 const pressedKeys = []
 const secretCode = 'weikai'
 const circle = document.querySelector(".circle")
-const intro = document.querySelector('.intro')
+const dialog = document.querySelector('dialog')
 
-intro.showModal()
+dialog.showModal()
 
 window.addEventListener('keyup', e => {
+  if (dialog.open) return
   pressedKeys.push(e.key)
   pressedKeys.splice(-pressedKeys.length, pressedKeys.length - secretCode.length)
   if (pressedKeys.join('') === secretCode) {

@@ -4,19 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Marker+Hatch&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Key sequence Detection</title>
     <script src="main.js" type="module" defer></script>
   </head>
   <body>
     <div class="circle"></div>
-    <dialog class="intro">
-      <h1>Introduction</h1>
-      <p>
-        Try to press correct word: <code>weikai</code>, you will get a
-        animation, just for fun 😂
-      </p>
-      <form method="dialog"><button>Close</button></form>
+    <dialog>
+      <div class="intro">
+        <h1 class="intro__title">Introduction</h1>
+        <p class="intro__description">
+          Try to press correct word: <code>weikai</code>, you will get a
+          animation, just for fun 😂
+        </p>
+        <form method="dialog"><button class="intro__close">Close</button></form>
+      </div>
     </dialog>
   </body>
 </html>
