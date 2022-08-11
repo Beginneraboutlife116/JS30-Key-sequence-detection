@@ -36,4 +36,5 @@ introClose.addEventListener('click', () => {
 
 showIntro.addEventListener('click', () => {
   dialog.showModal()
+  showIntro.classList.remove('show-up')
 })
