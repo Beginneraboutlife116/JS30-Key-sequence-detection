@@ -9,12 +9,24 @@ html, body {
 }
 
 .circle {
-  width: 100vmax;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background-color: #fff;
   position: absolute;
-  translate: -50% -50%;
   top: var(--top);
   left: var(--left);
+  width: 150vmax;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-image: conic-gradient(at top right, lightcyan, lightblue);
+  translate: -50% -50%;
+  scale: 0;
+}
+
+@keyframes pulse {
+  100% {
+    scale: 1;
+    opacity: 0;
+  }
+}
+
+.pulse {
+  animation: pulse 500ms;
 }
