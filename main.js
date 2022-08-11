@@ -3,6 +3,9 @@ import circlePositionByMousemove from "./src/position.js"
 const pressedKeys = []
 const secretCode = 'weikai'
 const circle = document.querySelector(".circle")
+const intro = document.querySelector('.intro')
+
+intro.showModal()
 
 window.addEventListener('keyup', e => {
   pressedKeys.push(e.key)

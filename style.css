@@ -8,6 +8,11 @@ html, body {
   overflow: hidden;
 }
 
+body {
+  display: grid;
+  place-items: center;
+}
+
 .circle {
   position: absolute;
   top: var(--top);
